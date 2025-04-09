@@ -16,7 +16,7 @@ const Container = styled.div(
 )
 
 interface ExampleCompProps {
-  title: string
+  title?: string
 }
 
 const ExampleComp = ({ title = 'Example Comp' }: ExampleCompProps) => {
