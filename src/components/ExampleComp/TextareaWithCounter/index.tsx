@@ -4,10 +4,10 @@ import styled from '@emotion/styled'
 const Container = styled.div(
   () => {
     return `
-        display: flex;
-        flex-direction: column;
-        font-family: verdana;
-        width: 100%;
+      display: flex;
+      flex-direction: column;
+      font-family: verdana;
+      width: 100%;
     `
   }
 )
@@ -15,9 +15,9 @@ const Container = styled.div(
 const TextAreaLabel = styled.label(
   () => {
     return `
-        font-size: 16px;
-        font-weight: 500;
-        margin-bottom: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 8px;
     `
   }
 )
@@ -26,12 +26,12 @@ const TextAreaLabel = styled.label(
 const TextArea = styled.textarea<{ resize: Resize }>(
   ({ resize }) => {
     return `
-        background-color: #f5f5f5;
-        font-size: 14px;
-        font-family: verdana;
-        border-radius: 4px;
-        padding: 8px;
-        resize: ${resize};
+      background-color: #f5f5f5;
+      font-size: 14px;
+      font-family: verdana;
+      border-radius: 4px;
+      padding: 8px;
+      resize: ${resize};
     `
   }
 )
@@ -39,10 +39,9 @@ const TextArea = styled.textarea<{ resize: Resize }>(
 const Counter = styled.p(
   () => {
     return `
-        font-size: 14px;
-        text-align: right;
-        margin: 2px 0;
-        margin-top: 8px;
+      font-size: 14px;
+      text-align: right;
+      margin: 8px 0 2px 0;
     `
   }
 )
@@ -50,10 +49,10 @@ const Counter = styled.p(
 const CounterContainer = styled.div(
   () => {
     return `
-        display: flex;
-        gap: 8px;
-        flex-direction: row;
-        justify-content: flex-end;
+      display: flex;
+      gap: 8px;
+      flex-direction: row;
+      justify-content: flex-end;
     `
   }
 )

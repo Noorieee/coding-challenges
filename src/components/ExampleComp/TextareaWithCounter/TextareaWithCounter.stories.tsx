@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import TextareaWithCounter from './index';
+import type { Meta, StoryObj } from '@storybook/react'
+import TextareaWithCounter from './index'
 
 const meta = {
   title: 'Inputs/TextareaWithCounter',
@@ -28,10 +28,10 @@ const meta = {
       description: 'The counter of the textarea'
     }
   }
-} satisfies Meta<typeof TextareaWithCounter>;
+} satisfies Meta<typeof TextareaWithCounter>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
@@ -40,7 +40,7 @@ export const Default: Story = {
     resize: 'both',
     counter: 'none',
   },
-};
+}
 
 export const WordCounter: Story = {
   args: {
@@ -49,7 +49,7 @@ export const WordCounter: Story = {
     resize: 'both',
     counter: 'word',
   },
-};
+}
 
 export const CharacterCounter: Story = {
   args: {
@@ -58,7 +58,7 @@ export const CharacterCounter: Story = {
     resize: 'both',
     counter: 'character',
   },
-};
+}
 
 export const BothCounters: Story = {
   args: {
@@ -67,7 +67,7 @@ export const BothCounters: Story = {
     resize: 'both',
     counter: 'both',
   },
-};
+}
 
 export const HorizontalResize: Story = {
   args: {
@@ -76,7 +76,7 @@ export const HorizontalResize: Story = {
     resize: 'horizontal',
     counter: 'none',
   },
-};
+}
 
 export const VerticalResize: Story = {
   args: {
@@ -85,8 +85,7 @@ export const VerticalResize: Story = {
     resize: 'vertical',
     counter: 'none',
   },
-};
-
+}
 
 export const WordCounterWithHorizontalResize: Story = {
   args: {
@@ -95,7 +94,7 @@ export const WordCounterWithHorizontalResize: Story = {
     resize: 'horizontal',
     counter: 'word',
   },
-};
+}
 
 export const CharacterCounterWithVerticalResize: Story = {
   args: {
@@ -104,7 +103,7 @@ export const CharacterCounterWithVerticalResize: Story = {
     resize: 'vertical',
     counter: 'character',
   },
-};
+}
 
 export const BothCountersWithBothResize: Story = {
   args: {
@@ -113,4 +112,4 @@ export const BothCountersWithBothResize: Story = {
     resize: 'both',
     counter: 'both',
   },
-};
+}
