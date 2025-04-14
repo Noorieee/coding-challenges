@@ -7,6 +7,7 @@ const Container = styled.div(
         display: flex;
         flex-direction: column;
         font-family: verdana;
+        width: 100%;
     `
   }
 )
@@ -26,7 +27,6 @@ const TextArea = styled.textarea<{ resize: Resize }>(
   ({ resize }) => {
     return `
         background-color: #f5f5f5;
-        width: 100%;
         font-size: 14px;
         font-family: verdana;
         border-radius: 4px;
