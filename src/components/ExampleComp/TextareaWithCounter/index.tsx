@@ -4,10 +4,10 @@ import styled from '@emotion/styled'
 const Container = styled.div(
   () => {
     return `
-      display: flex;
-      flex-direction: column;
-      font-family: verdana;
-      width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family: verdana;
+        width: 100%;
     `
   }
 )
@@ -26,12 +26,12 @@ const TextAreaLabel = styled.label(
 const TextArea = styled.textarea<{ resize: Resize }>(
   ({ resize }) => {
     return `
-      background-color: #f5f5f5;
-      font-size: 14px;
-      font-family: verdana;
-      border-radius: 4px;
-      padding: 8px;
-      resize: ${resize};
+        background-color: #f5f5f5;
+        font-size: 14px;
+        font-family: verdana;
+        border-radius: 4px;
+        padding: 8px;
+        resize: ${resize};
     `
   }
 )
