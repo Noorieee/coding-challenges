@@ -4,9 +4,9 @@ import styled from '@emotion/styled'
 const Container = styled.div(
   () => {
     return `
-    display: flex;
-    flex-direction: column;
-    font-family: verdana;
+        display: flex;
+        flex-direction: column;
+        font-family: verdana;
     `
   }
 )
@@ -14,25 +14,24 @@ const Container = styled.div(
 const TextAreaLabel = styled.label(
   () => {
     return `
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 8px;
     `
   }
 )
 
 // Adding resize prop to control the resizing of the text area
-const TextArea = styled.textarea<{ resize: string }>(
+const TextArea = styled.textarea<{ resize: Resize }>(
   ({ resize }) => {
     return `
-    background-color: #f5f5f5;
-    width: 400px;
-    height: auto;
-    font-size: 14px;
-    font-family: verdana;
-    border-radius: 4px;
-    padding: 8px;
-    resize: ${resize};
+        background-color: #f5f5f5;
+        width: 100%;
+        font-size: 14px;
+        font-family: verdana;
+        border-radius: 4px;
+        padding: 8px;
+        resize: ${resize};
     `
   }
 )
@@ -40,10 +39,10 @@ const TextArea = styled.textarea<{ resize: string }>(
 const Counter = styled.p(
   () => {
     return `
-    font-size: 14px;
-    text-align: right;
-    margin: 2px 0;
-    margin-top: 8px;
+        font-size: 14px;
+        text-align: right;
+        margin: 2px 0;
+        margin-top: 8px;
     `
   }
 )
@@ -51,19 +50,22 @@ const Counter = styled.p(
 const CounterContainer = styled.div(
   () => {
     return `
-    display: flex;
-    gap: 8px;
-    flex-direction: row;
-    justify-content: flex-end;
+        display: flex;
+        gap: 8px;
+        flex-direction: row;
+        justify-content: flex-end;
     `
   }
 )
+
+type Resize = 'none' | 'both' | 'horizontal' | 'vertical'
+
 // Defining properties / states that the component can accept
 // Included union type for resize to accept one of four resize options
 interface TextareaWithCounterProps {
   rows?: number
   label: string
-  resize?: 'none' | 'both' | 'horizontal' | 'vertical'
+  resize?: Resize
   counter?: 'word' | 'character' | 'none' | 'both'
 }
 
@@ -75,6 +77,7 @@ const TextareaWithCounter = ({ rows = 1, label, resize = 'none', counter = 'char
   const handleOnChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTextAreaValue(e.target.value)
   }
+
   // Renders a label, a textarea to type in, and a character count that dynamically updates as the user types below it.
   // TextArea Breakdown:
   // `value={textAreaValue}` binds the input to React state so it updates as the user types
@@ -84,6 +87,7 @@ const TextareaWithCounter = ({ rows = 1, label, resize = 'none', counter = 'char
     <Container>
       <TextAreaLabel htmlFor="textbox">{label}</TextAreaLabel>
       <TextArea id="textbox" onChange={handleOnChange} value={textAreaValue} rows={rows} resize={resize} />
+      
       {/* If the counter property is not set to show none then display the counter container on the page */}
       {counter !== 'none' ? (
         <CounterContainer>
@@ -91,7 +95,6 @@ const TextareaWithCounter = ({ rows = 1, label, resize = 'none', counter = 'char
           {counter === 'word' || counter === 'both' ? <Counter>Word Count: {textAreaValue.split(' ').filter(Boolean).length}</Counter> : null}
         </CounterContainer>
       ) : null}
-
     </Container>
   )
 }
