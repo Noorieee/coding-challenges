@@ -40,14 +40,14 @@ const AvatarInitial = styled.p(
 const AvatarImageContainer = styled.div<{ imageUrl: string }>(
   ({ imageUrl }) => {
     return `
-    border-radius: 50%;
-    border: 8px solid #ffffff;
-    width: 48px;
-    height: 48px;
-    object-fit: cover;
-    padding: 20px;
-    background-image: url("${imageUrl}");
-    background-size: cover;
+      border-radius: 50%;
+      border: 8px solid #ffffff;
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      padding: 20px;
+      background-image: url("${imageUrl}");
+      background-size: cover;
   `
   }
 )
@@ -69,11 +69,11 @@ const HiddenContainer = styled.div(
   }
 )
 
-const IndicatorContainer = styled.div<{ indicator: string }>(
+const IndicatorContainer = styled.div<{ indicator: Indicator }>(
   ({ indicator }) => {
 
-    // Making an object 
-    const iconColorMap: Record<string, string> = {
+    // Making an object that maps the indicator status' to colors
+    const iconColorMap: Record<Indicator, string> = {
       'online': 'green',
       'away': 'yellow',
       'busy': 'red'
@@ -108,9 +108,11 @@ const VanityImage = styled.img(
   }
 )
 
+type Indicator = 'online' | 'away' | 'busy'
+
 interface AvatarProps {
   initial: string
-  indicator?: 'online' | 'away' | 'busy'
+  indicator?: Indicator
   imageUrl?: string
   isHidden: boolean
   vanity?: boolean
@@ -125,7 +127,7 @@ const Avatar = ({ initial, indicator, imageUrl, isHidden, vanity }: AvatarProps)
     throw new Error("Numbers are not accepted.")
   }
 
-  const iconMap: Record<string, IconDefinition> = {
+  const iconMap: Record<Indicator, IconDefinition> = {
     'online': faCheck,
     'away': faQuestion,
     'busy': faMinus
@@ -148,16 +150,15 @@ const Avatar = ({ initial, indicator, imageUrl, isHidden, vanity }: AvatarProps)
   return (
     <Container>
       {whatToShow}
-
-      {/* Captured undefined check  */}
-      {indicator ?
-        (<IndicatorContainer indicator={indicator}>
+      {/* Captured undefined check */}
+      {indicator ? (
+        <IndicatorContainer indicator={indicator}>
           <FontAwesomeIcon icon={icon as IconProp} />
-        </IndicatorContainer>) : null
-      }
-
-      {vanity ? <VanityImage src={santaHat}></VanityImage> : null}
-
+        </IndicatorContainer>
+      ) : null}
+      {vanity ? (
+        <VanityImage src={santaHat} />
+      ) : null}
     </Container>
   )
 }
