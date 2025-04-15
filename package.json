@@ -51,9 +51,10 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^8.6.12",
+    "@storybook/addon-designs": "^8.2.1",
     "@storybook/addon-essentials": "^8.6.12",
     "@storybook/addon-interactions": "^8.6.12",
-    "@storybook/addon-onboarding": "^8.6.12",
     "@storybook/blocks": "^8.6.12",
     "@storybook/preset-create-react-app": "^8.6.12",
     "@storybook/react": "^8.6.12",
