@@ -11,7 +11,10 @@ const meta: Meta<typeof Avatar> = {
   argTypes: {
     initial: {
       description: 'Single character initial to display',
-      type: 'string'
+      type: {
+        name: 'string',
+        required: true
+      }
     },
     indicator: {
       description: 'Online status indicator',
@@ -24,11 +27,17 @@ const meta: Meta<typeof Avatar> = {
     },
     isHidden: {
       description: 'Whether to hide the avatar',
-      type: 'boolean'
+      type: 'boolean',
+      table: {
+        defaultValue: { summary: 'false' },
+      },
     },
     vanity: {
       description: 'Vanity flag',
-      type: 'boolean'
+      type: 'boolean',
+      table: {
+        defaultValue: { summary: 'false' },
+      },
     }
   }
 }

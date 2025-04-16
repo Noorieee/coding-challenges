@@ -14,7 +14,19 @@ const Container = styled.div(
   }
 )
 
-const AvatarInitial = styled.p(
+const BaseContainer = styled.div(
+  () => {
+    return `
+      border: 8px solid #ffffff;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      padding: 20px;
+    `
+  }
+)
+
+const AvatarInitial = styled(BaseContainer)(
   () => {
     return `
       display: flex;
@@ -27,44 +39,29 @@ const AvatarInitial = styled.p(
       font-weight: 600;
       color: #ffffff;
       background-color: #18ac24;
-      border-radius: 50%;
-      border: 8px solid #ffffff;
-      width: 48px;
-      height: 48px;
-      padding: 20px;
-      margin: 0px;
     `
   }
 )
 
-const AvatarImageContainer = styled.div<{ imageUrl: string }>(
+const AvatarImageContainer = styled(BaseContainer)<{ imageUrl: string }>(
   ({ imageUrl }) => {
     return `
-      border-radius: 50%;
-      border: 8px solid #ffffff;
-      width: 48px;
-      height: 48px;
       object-fit: cover;
-      padding: 20px;
       background-image: url("${imageUrl}");
       background-size: cover;
-  `
+    `
   }
 )
 
-const HiddenContainer = styled.div(
+const HiddenContainer = styled(BaseContainer)(
   () => {
     return `
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
       border: 8px solid #84c489;
       font-size: 32px;
       background-color: #18ac24;
-      width: 48px;
-      height: 48px;
-      padding: 20px;
     `
   }
 )
@@ -114,11 +111,11 @@ interface AvatarProps {
   initial: string
   indicator?: Indicator
   imageUrl?: string
-  isHidden: boolean
+  isHidden?: boolean
   vanity?: boolean
 }
 
-const Avatar = ({ initial, indicator, imageUrl, isHidden, vanity }: AvatarProps) => {
+const Avatar = ({ initial, indicator, imageUrl, isHidden = false, vanity = false }: AvatarProps) => {
   if (initial.length > 1) {
     throw new Error("Too many characters for initial prop. Must be 1.");
   }
@@ -135,7 +132,11 @@ const Avatar = ({ initial, indicator, imageUrl, isHidden, vanity }: AvatarProps)
 
   const icon = indicator ? iconMap[indicator] : ''
 
-  let whatToShow = <AvatarInitial>{initial}</AvatarInitial>
+  let whatToShow = (
+    <AvatarInitial>
+      <span>{initial}</span>
+    </AvatarInitial>
+  )
 
   if (isHidden) {
     whatToShow = (
@@ -157,7 +158,7 @@ const Avatar = ({ initial, indicator, imageUrl, isHidden, vanity }: AvatarProps)
         </IndicatorContainer>
       ) : null}
       {vanity ? (
-        <VanityImage src={santaHat} />
+        <VanityImage src={santaHat} alt="santa hat" />
       ) : null}
     </Container>
   )
