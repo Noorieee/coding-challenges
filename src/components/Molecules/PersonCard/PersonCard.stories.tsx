@@ -29,6 +29,11 @@ const meta: Meta<typeof PersonCard> = {
       control: 'text',
       description: 'URL of avatar image'
     },
+    indicator: {
+      description: 'Online status indicator',
+      options: ['online', 'away', 'busy', undefined],
+      control: 'select'
+    },
     vanity: {
       control: 'boolean',
       description: 'Vanity flag',
@@ -62,6 +67,7 @@ export const Default: Story = {
     name: 'Noor Hussain',
     email: 'noor.hussain@example.com',
     imageUrl: 'https://www.wboy.com/wp-content/uploads/sites/43/2024/02/North_American_river_otter.jpg',
+    indicator: undefined,
     vanity: false,
     isHidden: false,
     initial: 'N'
@@ -73,6 +79,7 @@ export const WithVanity: Story = {
     name: 'Noor Hussain',
     email: 'noor.hussain@example.com',
     imageUrl: 'https://www.wboy.com/wp-content/uploads/sites/43/2024/02/North_American_river_otter.jpg',
+    indicator: undefined,
     vanity: true,
     isHidden: false,
     initial: 'N'
@@ -84,7 +91,20 @@ export const WithInitial: Story = {
     name: 'Noor Hussain',
     email: 'noor.hussain@example.com',
     imageUrl: '',
-    vanity: true,
+    indicator: undefined,
+    vanity: false,
+    isHidden: false,
+    initial: 'N'
+  }
+}
+
+export const WithIndicator: Story = {
+  args: {
+    name: 'Noor Hussain',
+    email: 'noor.hussain@example.com',
+    imageUrl: '',
+    indicator: 'online',
+    vanity: false,
     isHidden: false,
     initial: 'N'
   }
@@ -95,6 +115,7 @@ export const HiddenCard: Story = {
     name: 'Noor Hussain',
     email: 'noor.hussain@example.com',
     imageUrl: 'https://www.wboy.com/wp-content/uploads/sites/43/2024/02/North_American_river_otter.jpg',
+    indicator: undefined,
     vanity: false,
     isHidden: true,
     initial: 'N'

@@ -82,7 +82,7 @@ const HiddenDetail = styled.div<{ isSmall?: boolean }>(
     return `
       margin: 0px;
       width: 100%;
-      min-width: 150px;
+      min-width: 200px;
       width: 100%;
       height: ${isSmall ? '16px' : '30px'};
       background-color: #a5e0aa;
@@ -90,19 +90,22 @@ const HiddenDetail = styled.div<{ isSmall?: boolean }>(
   }
 )
 
+type Indicator = 'online' | 'away' | 'busy'
+
 interface PersonCardProps {
   name: string
   email: string
   imageUrl?: string
   vanity?: boolean
+  indicator?: Indicator
   isHidden?: boolean
   initial: string
 }
 
-const PersonCard = ({ name, email, imageUrl, vanity, isHidden, initial }: PersonCardProps) => {
+const PersonCard = ({ name, email, imageUrl, indicator, vanity, isHidden, initial }: PersonCardProps) => {
   return (
     <PersonCardContainer>
-      <AvatarContainer><Avatar initial={initial} imageUrl={imageUrl} isHidden={isHidden} vanity={vanity} /></AvatarContainer>
+      <AvatarContainer><Avatar initial={initial} imageUrl={imageUrl} indicator={indicator} isHidden={isHidden} vanity={vanity} /></AvatarContainer>
       <PersonDetailsContainer isHidden={isHidden}>
         {isHidden ? (
           <>
