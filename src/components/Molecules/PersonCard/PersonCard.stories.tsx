@@ -47,14 +47,6 @@ const meta: Meta<typeof PersonCard> = {
       table: {
         defaultValue: { summary: 'false' },
       },
-    },
-    initial: {
-      control: 'text',
-      description: 'The initial of the person',
-      type: {
-        name: 'string',
-        required: true
-      }
     }
   }
 }
@@ -69,8 +61,7 @@ export const Default: Story = {
     imageUrl: 'https://www.wboy.com/wp-content/uploads/sites/43/2024/02/North_American_river_otter.jpg',
     indicator: undefined,
     vanity: false,
-    isHidden: false,
-    initial: 'N'
+    isHidden: false
   }
 }
 
@@ -81,8 +72,7 @@ export const WithVanity: Story = {
     imageUrl: 'https://www.wboy.com/wp-content/uploads/sites/43/2024/02/North_American_river_otter.jpg',
     indicator: undefined,
     vanity: true,
-    isHidden: false,
-    initial: 'N'
+    isHidden: false
   }
 }
 
@@ -93,8 +83,7 @@ export const WithInitial: Story = {
     imageUrl: '',
     indicator: undefined,
     vanity: false,
-    isHidden: false,
-    initial: 'N'
+    isHidden: false
   }
 }
 
@@ -105,8 +94,7 @@ export const WithIndicator: Story = {
     imageUrl: '',
     indicator: 'online',
     vanity: false,
-    isHidden: false,
-    initial: 'N'
+    isHidden: false
   }
 }
 
@@ -117,7 +105,6 @@ export const HiddenCard: Story = {
     imageUrl: 'https://www.wboy.com/wp-content/uploads/sites/43/2024/02/North_American_river_otter.jpg',
     indicator: undefined,
     vanity: false,
-    isHidden: true,
-    initial: 'N'
+    isHidden: true
   }
 }

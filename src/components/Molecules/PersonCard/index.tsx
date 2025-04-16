@@ -99,13 +99,18 @@ interface PersonCardProps {
   vanity?: boolean
   indicator?: Indicator
   isHidden?: boolean
-  initial: string
 }
 
-const PersonCard = ({ name, email, imageUrl, indicator, vanity, isHidden, initial }: PersonCardProps) => {
+const PersonCard = ({ name, email, imageUrl, indicator, vanity, isHidden }: PersonCardProps) => {
+  
+  // Gets the first character from the name and sets that as initial
+  const initial = name.charAt(0)
+  
   return (
     <PersonCardContainer>
-      <AvatarContainer><Avatar initial={initial} imageUrl={imageUrl} indicator={indicator} isHidden={isHidden} vanity={vanity} /></AvatarContainer>
+      <AvatarContainer>
+        <Avatar initial={initial} imageUrl={imageUrl} indicator={indicator} isHidden={isHidden} vanity={vanity} />
+      </AvatarContainer>
       <PersonDetailsContainer isHidden={isHidden}>
         {isHidden ? (
           <>
