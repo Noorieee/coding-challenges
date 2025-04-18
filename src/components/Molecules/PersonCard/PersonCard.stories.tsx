@@ -12,18 +12,12 @@ const meta: Meta<typeof PersonCard> = {
     name: {
       control: 'text',
       description: 'Name of the person',
-      type: {
-        name: 'string',
-        required: true
-      }
+      type: 'string'
     },
     email: {
       control: 'text',
       description: 'Email of the person',
-      type: {
-        name: 'string',
-        required: true
-      }
+      type: 'string'
     },
     imageUrl: {
       control: 'text',

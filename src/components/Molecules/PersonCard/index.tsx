@@ -93,8 +93,8 @@ const HiddenDetail = styled.div<{ isSmall?: boolean }>(
 type Indicator = 'online' | 'away' | 'busy'
 
 interface PersonCardProps {
-  name: string
-  email: string
+  name?: string
+  email?: string
   imageUrl?: string
   vanity?: boolean
   indicator?: Indicator
@@ -102,9 +102,15 @@ interface PersonCardProps {
 }
 
 const PersonCard = ({ name, email, imageUrl, indicator, vanity, isHidden }: PersonCardProps) => {
-  
+  // Throw an error if name and email does not exist and isHidden is false
+  if((!name || !email) && !isHidden) {
+    throw new Error("You need to have either name and email or isHidden.")
+  }
+
   // Gets the first character from the name and sets that as initial
-  const initial = name.charAt(0)
+  // If name exists then do chatAt(0)
+  // Optional chaining
+  const initial = name?.charAt(0)
   
   return (
     <PersonCardContainer>
