@@ -69,7 +69,7 @@ const HiddenContainer = styled(BaseContainer)(
 const IndicatorContainer = styled.div<{ indicator: Indicator }>(
   ({ indicator }) => {
 
-    // Making an object that maps the indicator status' to colors
+    // Object map that maps the indicator status' to colors
     const iconColorMap: Record<Indicator, string> = {
       'online': 'green',
       'away': 'yellow',
@@ -108,22 +108,30 @@ const VanityImage = styled.img(
 type Indicator = 'online' | 'away' | 'busy'
 
 interface AvatarProps {
-  initial: string
+  initial?: string
   indicator?: Indicator
   imageUrl?: string
   isHidden?: boolean
   vanity?: boolean
 }
 
-const Avatar = ({ initial, indicator, imageUrl, isHidden = false, vanity = false }: AvatarProps) => {
+const Avatar = ({ initial = '', indicator, imageUrl, isHidden = false, vanity = false }: AvatarProps) => {
+  // Throw an error if name and email does not exist, isHidden is false and imageUrl does not exist
+  if(!initial && !isHidden && !imageUrl) {
+    throw new Error("You need to have either name and email, isHidden or imageURL.")
+  }
+
+  // Throw an error if there is more than one inital
   if (initial.length > 1) {
     throw new Error("Too many characters for initial prop. Must be 1.");
   }
 
-  if (!isNaN(Number(initial))) {
+  // Throw an error if intial exists and if it is a number 
+  if (initial && !isNaN(Number(initial))) {
     throw new Error("Numbers are not accepted.")
   }
 
+  // Object map that maps the indicator status' to icons
   const iconMap: Record<Indicator, IconDefinition> = {
     'online': faCheck,
     'away': faQuestion,

@@ -11,10 +11,10 @@ const meta: Meta<typeof Avatar> = {
   argTypes: {
     initial: {
       description: 'Single character initial to display',
-      type: {
-        name: 'string',
-        required: true
-      }
+      type: 'string',
+      table: {
+        defaultValue: { summary: '' },
+      },
     },
     indicator: {
       description: 'Online status indicator',
