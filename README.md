@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+#  Code Challenges
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hi! I'm Noor, and this repo is a growing collection of React components I'm building as part of coding challenges, design explorations, and UI experiments.
 
-## Available Scripts
+The goal? To sharpen my front-end skills, explore reusable patterns, and bridge the gap between **design and development** using React + Figma.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🧠 What’s Inside
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- A variety of **React components** – some based on references, others fully custom designed by me  
+- Styled and documented using **Storybook**  
+- Designed in **Figma** (mockups coming soon!)  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 🌍 View Components Live
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📦 **No need to clone or install!**  
+You can explore all components visually on my hosted Storybook instance:
 
-### `npm run build`
+👉 [**noorhussain.co.uk**](https://noorhussain.co.uk)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React (Create React App)  
+- Storybook  
+- Figma (for mockups & design)  
+- Custom domain for live preview
+- Hosted on Netlify  
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🚀 Getting Started Locally
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you want to run the project locally:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm install
+npm run storybook
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 👩🏽‍💻 About Me
 
-## Learn More
+I'm a passionate and eager designer with a strong focus on crafting thoughtful, user-first digital experiences. My background blends **product and UX/UI design** with **front-end development**, allowing me to bridge the gap between beautiful interfaces and functional code.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+While my core passion lies in design, I'm continuously levelling up my technical skills — currently learning **TypeScript** and deepening my React knowledge — to better collaborate with dev teams and bring ideas to life with precision.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Thanks for checking out my work!
+
+[**noorhussain.co.uk**](https://noorhussain.co.uk)
+🔹 [**Design Portfolio**](https://noorhussain.co.uk)
+🔹 [**Linkedin**](https://www.linkedin.com/in/mahnoor-hussain-090718159/)
+
+---
