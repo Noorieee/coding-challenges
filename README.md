@@ -51,7 +51,7 @@ While my core passion lies in design, I'm continuously levelling up my technical
 Thanks for checking out my work!
 
 [**noorhussain.co.uk**](https://noorhussain.co.uk)
-🔹 [**Design Portfolio**](https://noorhussain.co.uk)
+🔹 [**Dribble**](https://dribbble.com/noor_hussain)
 🔹 [**Linkedin**](https://www.linkedin.com/in/mahnoor-hussain-090718159/)
 
 ---
