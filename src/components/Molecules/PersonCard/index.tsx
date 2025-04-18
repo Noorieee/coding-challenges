@@ -24,7 +24,7 @@ const AvatarContainer = styled.div(
       position: absolute;
       left: 20px;
       top: 50px;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -49%);
       z-index: 1;
     `
   }
@@ -32,14 +32,12 @@ const AvatarContainer = styled.div(
 
 const PersonDetailsContainer = styled.div<{ isHidden?: boolean }>(
   ({ isHidden }) => {
-    let colors = `
-      background-color: #f0f0f0;
-    `
+    let colors = 'background-color: #f0f0f0;'
+
     if (isHidden) {
-      colors = `
-        background-color: #84c489;
-      `
+      colors = 'background-color: #84c489;'
     }
+    
     return `
       display: flex;
       flex-direction: column;
@@ -82,9 +80,7 @@ const HiddenDetail = styled.div<{ isSmall?: boolean }>(
     return `
       margin: 0px;
       width: 100%;
-      min-width: 200px;
-      width: 100%;
-      height: ${isSmall ? '16px' : '30px'};
+      height: ${isSmall ? '16px' : '37px'};
       background-color: #a5e0aa;
     `
   }

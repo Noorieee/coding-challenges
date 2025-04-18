@@ -42,6 +42,13 @@ const meta: Meta<typeof PersonCard> = {
         defaultValue: { summary: 'false' },
       },
     }
+  },
+  render: ({ ...args }) => {
+    return (
+      <div style={{ width: '500px'}}>
+        <PersonCard {...args} />
+      </div>
+    )
   }
 }
 
