@@ -1,5 +1,5 @@
 import React from 'react'
-import Avatar from '../../Atoms/Avatar'
+import Avatar from '../../atoms/Avatar'
 import styled from '@emotion/styled'
 
 const PersonCardContainer = styled.div(
