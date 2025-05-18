@@ -31,7 +31,6 @@ const InputLabel = styled.label<{ isFocused: boolean, hasErrorMessage: boolean, 
       position: absolute;
       top: ${isFocused ? '0px' : '16px'};
       left: ${isFocused ? '6px' : '16px'};
-      // transform: translate(-75%);
       font-family: "Poppins", sans-serif;
       font-weight: 500;
       font-style: normal;
@@ -129,7 +128,7 @@ const Input = ({ id, label, onChange, value, isDisabled = false, errorMessage }:
   }
 
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // Throwing onChange to parent to handle
+    // Passing the updated input value to the parent
     onChange(event.target.value)
   }
 

@@ -72,8 +72,6 @@ type Story = StoryObj<typeof Input>
 export const Default: Story = {
   args: {
     label: 'Name',
-    isDisabled: false,
-    errorMessage: '',
     id: 'text',
     value: '',
   },
@@ -82,8 +80,6 @@ export const Default: Story = {
 export const Focused: Story = {
   args: {
     label: 'Name',
-    isDisabled: false,
-    errorMessage: '',
     id: 'focused',
     value: 'Typing...',
   },
@@ -92,7 +88,6 @@ export const Focused: Story = {
 export const Error: Story = {
   args: {
     label: 'Name',
-    isDisabled: false,
     errorMessage: 'This is an error message',
     id: 'error',
     value: 'Invalid input',
@@ -103,7 +98,6 @@ export const Disabled: Story = {
   args: {
     label: 'Name',
     isDisabled: true,
-    errorMessage: '',
     id: 'disabled',
     value: 'Cannot edit this',
   },
