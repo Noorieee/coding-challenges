@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import TextareaWithCounter from './index'
 
 const meta = {
-  title: 'Molecules/TextareaWithCounter',
+  title: 'Challenges/Molecules/TextareaWithCounter',
   component: TextareaWithCounter,
   parameters: {
     layout: 'centered',

@@ -3,7 +3,7 @@ import Input from './index'
 import { useState } from 'react'
 
 const meta: Meta<typeof Input> = {
-  title: 'Atoms/Input',
+  title: 'Challenges/Atoms/Input',
   component: Input,
   parameters: {
     layout: 'centered',

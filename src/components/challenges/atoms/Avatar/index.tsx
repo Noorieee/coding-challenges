@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faMinus, faQuestion, IconDefinition, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import santaHat from '../../../../public/santa-hat.png'
+import santaHat from '../../../../../public/santa-hat.png'
 
 
 const Container = styled.div(

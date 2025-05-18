@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import PersonCard from './index'
 
 const meta: Meta<typeof PersonCard> = {
-  title: 'Molecules/PersonCard',
+  title: 'Challenges/Molecules/PersonCard',
   component: PersonCard,
   parameters: {
     layout: 'centered',
