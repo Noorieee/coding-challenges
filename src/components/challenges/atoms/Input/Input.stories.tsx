@@ -7,6 +7,10 @@ const meta: Meta<typeof Input> = {
   component: Input,
   parameters: {
     layout: 'centered',
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/3vVyb6bpZ42mPVybT2h6sJ/UX-UI-Courses?node-id=2027-2164&t=7DwzMnIjAfPBJzBU-1'
+    }
   },
   tags: ['autodocs'],
   argTypes: {
@@ -14,50 +18,50 @@ const meta: Meta<typeof Input> = {
       description: 'Label for the input field',
       type: 'string',
       table: {
-        defaultValue: { summary: 'Name' },
-      },
+        defaultValue: { summary: 'Name' }
+      }
     },
     isDisabled: {
       description: 'Whether input is disabled',
       type: 'boolean',
       table: {
-        defaultValue: { summary: 'false' },
-      },
+        defaultValue: { summary: 'false' }
+      }
     },
     errorMessage: {
       description: 'Text to display below the input when there is an error.',
       type: 'string',
       table: {
-        defaultValue: { summary: 'This is an error message' },
-      },
+        defaultValue: { summary: 'This is an error message' }
+      }
     },
     id: {
       description: 'ID of input label',
       type: 'string',
       table: {
-        defaultValue: { summary: 'text' },
-      },
+        defaultValue: { summary: 'text' }
+      }
     },
     onChange: {
       action: 'onChange',
       table: {
         category: 'Events',
-        type: { summary: '(value: string) => void' },
-      },
+        type: { summary: '(value: string) => void' }
+      }
     },
     value: {
       description: 'Text value of input',
       type: 'string',
       table: {
-        defaultValue: { summary: 'text' },
-      },
-    },
+        defaultValue: { summary: 'text' }
+      }
+    }
   },
   render: ({ value: initialValue = '', ...args }) => {
     const [value, setValue] = useState(initialValue)
 
     const handleOnChange = (value: string) => {
-      setValue(value);
+      setValue(value)
     }
 
     return (
@@ -73,16 +77,16 @@ export const Default: Story = {
   args: {
     label: 'Name',
     id: 'text',
-    value: '',
-  },
+    value: ''
+  }
 }
 
 export const Focused: Story = {
   args: {
     label: 'Name',
     id: 'focused',
-    value: 'Typing...',
-  },
+    value: 'Typing...'
+  }
 }
 
 export const Error: Story = {
@@ -90,8 +94,8 @@ export const Error: Story = {
     label: 'Name',
     errorMessage: 'This is an error message',
     id: 'error',
-    value: 'Invalid input',
-  },
+    value: 'Invalid input'
+  }
 }
 
 export const Disabled: Story = {
@@ -99,6 +103,6 @@ export const Disabled: Story = {
     label: 'Name',
     isDisabled: true,
     id: 'disabled',
-    value: 'Cannot edit this',
-  },
+    value: 'Cannot edit this'
+  }
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 
 const Container = styled.div(
   () => {
@@ -43,15 +43,15 @@ const InputLabel = styled.label<{ isFocused: boolean, hasErrorMessage: boolean, 
   }
 )
 
-const InputField = styled.input<{ isDisabled: boolean, hasErrorMessage: boolean, }>(
+const InputField = styled.input<{ isDisabled: boolean, hasErrorMessage: boolean }>(
   ({ isDisabled, hasErrorMessage }) => {
 
     let backgroundColor = '#ffffff'
     let outlineColor = '#6C6C6C'
 
-    if(isDisabled) {
+    if (isDisabled) {
       backgroundColor = '#E9E9E9'
-    } else if(hasErrorMessage) {
+    } else if (hasErrorMessage) {
       backgroundColor = '#FCE9E9'
       outlineColor = '#DD7070'
     }
