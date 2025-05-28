@@ -57,8 +57,8 @@ const meta: Meta<typeof Input> = {
       }
     }
   },
-  render: ({ value: initialValue = '', ...args }) => {
-    const [value, setValue] = useState(initialValue)
+  render: ({ ...args }) => {
+    const [value, setValue] = useState('')
 
     const handleOnChange = (value: string) => {
       setValue(value)
